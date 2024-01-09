@@ -1,28 +1,18 @@
-import { useState } from "react";
 import NewPost from "./NewPost";
 import Post from "./Post";
 import classes from "./PostList.module.css";
+import Modal from "./Modal";
 
-function PostList() {
-  const [enteredBody, setEnteredBody] = useState("");
-  const [enteredAuthor, setEnteredAuthor] = useState("");
-
-  function bodyChangeHandler(event) {
-    setEnteredBody(event.target.value);
-  }
-
-  function authorChangeHandler(event) {
-    setEnteredAuthor(event.target.value);
-  }
-
+function PostList({ isPosting, onStopPosting }) {
   return (
     <>
-      <NewPost
-        onBodyChange={bodyChangeHandler}
-        onAuthorChange={authorChangeHandler}
-      />
+      {isPosting && (
+        <Modal onClose={onStopPosting}>
+          <NewPost onCancel={onStopPosting} />
+        </Modal>
+      )}
+
       <ul className={classes.posts}>
-        <Post author={enteredAuthor} body={enteredBody} />
         <Post author="Inigo" body="Check out the full course!" />
       </ul>
     </>
