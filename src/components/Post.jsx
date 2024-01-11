@@ -1,5 +1,4 @@
 import classes from "./Post.module.css";
-import NewPost from "./NewPost";
 
 function Post({ author, body }) {
   return (
