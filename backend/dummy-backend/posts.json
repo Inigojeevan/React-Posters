@@ -1,10 +1,1 @@
-{
-  "posts": [
-    { "body": "just hello", "author": "jeevan", "id": "0.8611327208908068" },
-    {
-      "body": "hello to dummy backend",
-      "author": "Jeevan",
-      "id": "0.4372593481310936"
-    }
-  ]
-}
+{"posts":[{"body":"hello from naveen","author":"Naveeen","id":"0.04392435019146168"},{"body":"just hello","author":"jeevan","id":"0.8611327208908068"},{"body":"hello to dummy backend","author":"Jeevan","id":"0.4372593481310936"}]}
